@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/NghiaMusic/static/css/main.7a52fb13.css",
+    "main.js": "/NghiaMusic/static/js/main.f6aeda81.js",
+    "index.html": "/NghiaMusic/index.html",
+    "main.7a52fb13.css.map": "/NghiaMusic/static/css/main.7a52fb13.css.map",
+    "main.f6aeda81.js.map": "/NghiaMusic/static/js/main.f6aeda81.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a52fb13.css",
+    "static/js/main.f6aeda81.js"
+  ]
+}
