@@ -1,0 +1,51 @@
+/* NavaBar.css */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    height: 50px;
+    border-radius: 30px;
+  }
+  
+  .navbar-logo  {
+    height: 40px;
+    margin-top: 10px;
+    color: pink;
+  }
+  
+  .navbar-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .navbar-button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .navbar-button:hover {
+    background-color: #777;
+  }
+  
+  .navbar-search {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+  }
+
+
+.home-icon {
+  margin-right: 0.5rem;
+  font-size: 1.0rem; /* Điều chỉnh kích thước biểu tượng nếu muốn */
+  display: inline;
+}

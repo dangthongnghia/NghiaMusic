@@ -1,0 +1,111 @@
+/* Song list styles */
+.list-music{
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  gap: 24px;
+  flex: 1;
+  max-height: 500px; /* Set the desired maximum height */
+  overflow-y: auto;
+  width: auto;
+  background: var(--spotify-black);
+}
+
+.song-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  background: var(--spotify-grey);
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  width: 200px;
+  height: 280px;
+  position: relative;
+}
+
+.song-item img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.song-item h3 {
+  color: var(--spotify-white);
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.song-item p {
+  color: var(--spotify-light-grey);
+  margin: 4px 0 0;
+  font-size: 12px;
+  text-align: center;
+}
+
+.song-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px);
+}
+
+.song-details {
+  flex: 1;
+}
+
+.add-playlist-btn {
+  background: transparent;
+  border: none;
+  color: var(--spotify-light-grey);
+  cursor: pointer;
+  font-size: 1.2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: color 0.2s ease;
+}
+
+.add-playlist-btn:hover {
+  color: var(--spotify-white);
+}
+
+/* Tùy chỉnh thanh cuộn */
+.song-list {
+  overflow-y: auto; /* Đảm bảo phần tử có thanh cuộn dọc */
+}
+
+.song-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.song-list::-webkit-scrollbar-track {
+  background: var(--spotify-grey);
+}
+
+.song-list::-webkit-scrollbar-thumb {
+  background-color: var(--spotify-green);
+  border-radius: 4px;
+  border: 2px solid var(--spotify-grey);
+}
+
+.song-list::-webkit-scrollbar-thumb:hover {
+  background-color: #17a44c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .song-list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+    padding: 1rem;
+  }
+
+  .add-playlist-btn {
+    font-size: 1rem;
+    right: 0.8rem;
+  }
+}

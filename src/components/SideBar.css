@@ -1,0 +1,110 @@
+/* SideBar.css */
+
+/* Global Sidebar Styles */
+.sidebar {
+  width: 240px; /* Fixed width */
+  background: var(--spotify-black);
+  padding: 1rem;
+  overflow-y: auto;
+  height: 100vh; /* Ensure sidebar takes full viewport height */
+}
+
+/* Sidebar Sections */
+.sidebar-section {
+  margin-bottom: 2rem;
+}
+
+.sidebar-section h3 {
+  color: var(--spotify-light-grey);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+/* Sidebar Lists */
+.sidebar-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-section li {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  color: var(--spotify-light-grey);
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.sidebar-section li:hover {
+  color: var(--spotify-white);
+  transform: translateX(5px);
+}
+
+/* Sidebar Icons */
+.sidebar-icon {
+  margin-right: 0.75rem;
+  font-size: 1rem;
+  color: var(--spotify-light-grey);
+  transition: color 0.2s ease;
+}
+
+.sidebar-section li:hover .sidebar-icon {
+  color: var(--spotify-white);
+}
+
+/* Playlist Name Styling */
+.playlist-name {
+  cursor: pointer;
+  color: var(--spotify-light-grey);
+  transition: color 0.2s ease;
+}
+
+.playlist-name:hover {
+  color: var(--spotify-white);
+}
+
+/* Nested Playlist Styles */
+.nested-playlist {
+  list-style: none;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.nested-playlist li {
+  font-size: 0.8rem;
+  color: var(--spotify-light-grey);
+  cursor: default;
+  transition: color 0.2s ease;
+}
+
+.nested-playlist li:hover {
+  color: var(--spotify-white);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    padding: 0.8rem;
+  }
+
+  .sidebar-section h3 {
+    font-size: 0.8rem;
+  }
+
+  .sidebar-section li {
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+  }
+
+  .sidebar-icon {
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+  }
+
+  .nested-playlist li {
+    font-size: 0.7rem;
+  }
+}

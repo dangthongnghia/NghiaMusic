@@ -1,0 +1,186 @@
+/* App.css */
+:root {
+  --spotify-green: #1DB954;
+  --spotify-black: #121212;
+  --spotify-grey: #282828;
+  --spotify-light-grey: #B3B3B3;
+  --spotify-white: #FFFFFF;
+}
+
+/* Global Box Sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Ubuntu', sans-serif;
+  background: var(--spotify-black);
+  color: var(--spotify-white);
+}
+
+/* App Container */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--spotify-black);
+}
+
+/* Navbar styles */
+.navbar {
+  background: var(--spotify-black);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--spotify-grey);
+}
+
+.navbar-center {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-search {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  background: var(--spotify-grey);
+  color: var(--spotify-white);
+  width: 300px;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 240px; /* Fixed width */
+  background: var(--spotify-black);
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.sidebar-section h3 {
+  color: var(--spotify-light-grey);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 0.5rem 0;
+  color: var(--spotify-light-grey);
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  color: var(--spotify-white);
+}
+
+/* Main content */
+.main-content {
+  display: flex;
+  flex: 1; /* Take up remaining space */
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 100px; /* Space for progress bar */
+}
+
+/* Song List Styles */
+.song-list {
+  padding: 2rem;
+
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  flex: 1; /* Take up remaining space */
+  overflow-y: auto; /* Enable scrolling if content overflows */
+  background: var(--spotify-black);
+}
+
+/* Progress bar styles */
+.progress-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--spotify-grey);
+  padding: 1rem 2rem;
+  border-top: 1px solid #000;
+  z-index: 1000;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-bar {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--spotify-white);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  background: var(--spotify-green);
+  transform: scale(1.2);
+}
+
+.time-display {
+  color: var(--spotify-light-grey);
+  font-size: 0.8rem;
+  min-width: 40px;
+  text-align: center;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px;
+  }
+  
+  .navbar-search {
+    width: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    display: none;
+  }
+  
+  .navbar-search {
+    width: 150px;
+  }
+}

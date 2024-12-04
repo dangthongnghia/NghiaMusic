@@ -1,0 +1,61 @@
+/* AddToPlaylistModal.css */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+  }
+  
+  .modal-content {
+    background: var(--spotify-grey);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .modal-content h3 {
+    margin-bottom: 1rem;
+    color: var(--spotify-white);
+  }
+  
+  .modal-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-content li {
+    margin: 0.5rem 0;
+  }
+  
+  .modal-content button {
+    background: var(--spotify-green);
+    color: var(--spotify-white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    width: 100%;
+  }
+  
+  .modal-content button:hover {
+    background: #17a44c;
+  }
+  
+  .close-btn {
+    background: transparent;
+    color: var(--spotify-white);
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
